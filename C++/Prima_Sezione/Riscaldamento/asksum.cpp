@@ -20,7 +20,6 @@ int main() {
   // stampare un a capo seguito dalla stringa "b vale " e dal valore di b
   cout << endl << "b vale: " << b;
 
-  // scambiare fra loro i valori di a e b: per farlo serve una variabile di appoggio c
   // dichiarare una variabile c di tipo int inizializzata con il valore di a
   int c = a;
   // assegnare ad a il valore di b
