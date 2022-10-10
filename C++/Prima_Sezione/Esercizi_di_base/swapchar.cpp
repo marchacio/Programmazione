@@ -3,8 +3,8 @@ using namespace std;
 
 int main() {
 
-  /*Scrivere un programma che scambia i valori di due variabili di tipo char, lette da input, e stampa i valori prima e dopo lo
-  scambio. Il programma deve essere scritto in un file chiamato swapchar.cpp*/
+  /*CONSEGNA: Scrivere un programma che scambia i valori di due variabili di tipo char, lette da input, e stampa i valori prima e dopo lo
+    scambio. Il programma deve essere scritto in un file chiamato swapchar.cpp*/
 
   //Dichiara la variabile char a e assegnale il valore di input
   cout << "Digita la prima lettera: ";
