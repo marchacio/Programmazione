@@ -29,4 +29,5 @@ int main() {
   cout << "Il valore di a: " << a << endl;
   cout << "Il valore di b: " << b << endl;
 
+  return 0;
 }
