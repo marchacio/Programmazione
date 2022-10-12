@@ -23,4 +23,5 @@ int main() {
   cout << "L'area del triangolo e': " << area << endl;
   cout << "Il perimetro del triangolo e': " << perimetro << endl;
 
+  return 0;
 }
