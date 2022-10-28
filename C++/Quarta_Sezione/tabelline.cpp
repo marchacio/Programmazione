@@ -24,7 +24,10 @@ int main() {
   std::cout << "Inserisci due numeri tra 1 e 10: ";
   std::cin >> a >> b;
 
-  std::cout << "Il risultato e': " << tavolaPitagorica[a-1][b-1];
+  if(a > 0 && a <= N && b > 0 && b <= N)
+    std::cout << "Il risultato e': " << tavolaPitagorica[a-1][b-1];
+  else
+    std::cout << "Valori non ammessi";
 
   return 0;
 }
