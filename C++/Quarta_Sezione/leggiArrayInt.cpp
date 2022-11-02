@@ -20,14 +20,14 @@ main() {
 
   const int N = 10;
 
-  int a[N];
+  int v[N];
 
   for (int i = 0; i < N; ++i) {
     int val;
     std::cout << "Valore n." << i << ": ";
     std::cin >> val;
 
-    a[i] = val;
+    v[i] = val;
   }
 
   return 0;

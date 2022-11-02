@@ -16,19 +16,19 @@ main() {
 
   const int N = 10;
 
-  float a[N];
+  float v[N];
 
   for (int i = 0; i < N; ++i) {
     float val;
     std::cout << "Valore n." << i << ": ";
     std::cin >> val;
 
-    a[i] = val;
+    v[i] = val;
   }
 
   float sum = 0.0;
   for (int i = 0; i < N; ++i) {
-    sum += a[i];
+    sum += v[i];
   }
 
   std::cout << "La media dei " << N << " input e': " << sum/N;
