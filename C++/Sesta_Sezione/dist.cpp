@@ -14,7 +14,7 @@ struct Point {
   double y;
 };
 
-main() {
+int main() {
   Point p1, p2;
 
   std::cout << "Inserire le coordinate del punto P1: ";

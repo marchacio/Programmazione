@@ -6,7 +6,7 @@ struct Person {
   int birthYear;
 };
 
-main() {
+int main() {
 
   Person me, you;
 
