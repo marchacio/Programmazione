@@ -20,11 +20,11 @@ int main() {
 
   int N = 5;
 
-  //Questo perche almeno un lato deve esistere
-  std::cout << "Inserisci la lunghezza dell'array (minimo 2): ";
+  //Questo perche almeno tre lati devono esistere per essere definito poligono
+  std::cout << "Inserisci la lunghezza dell'array (minimo 4): ";
   std::cin >> N;
 
-  if(N >= 2){
+  if(N >= 4){
     Point points[N];
 
     //Popula l'array di Point

@@ -9,6 +9,9 @@ Point (che rappresenta una spezzata o “polilinea”), e:
 • verifica se la spezzata è chiusa, e se lo è scrive un messaggio: “La linea è chiusa e quindi definisce un poligono”. Se i
 lati hanno tutti la stessa lunghezza, aggiungere: “regolare”.
 [ File poly1.cpp ]
+
+Implementare poi la seguente variante: se per una certo valore di N il poligono ha un nome (N=3 “triangolo”, N=4
+“rettangolo”, N=5 “pentagono”. . . ) sostituire alla parola “poligono” il nome appropriato.
 */
 
 struct Point {
@@ -20,11 +23,11 @@ int main() {
 
   int N = 5;
 
-  //Questo perche almeno un lato deve esistere
-  std::cout << "Inserisci la lunghezza dell'array (minimo 2): ";
+  //Questo perche almeno tre lati devono esistere per essere definito poligono
+  std::cout << "Inserisci la lunghezza dell'array (minimo 4): ";
   std::cin >> N;
 
-  if(N >= 2){
+  if(N >= 4){
     Point points[N];
 
     //Popula l'array di Point
@@ -59,7 +62,38 @@ int main() {
 
     //verifica se la spezzata è chiusa
     if(points[0].x == points[N-1].x && points[0].y == points[N-1].y){
-      std::cout << "La linea e' chiusa e quindi definisce un poligono";
+
+      //controlla se è un poligono con un nome definito
+      switch(N-1){
+        case 3:
+          std::cout << "La linea e' chiusa e quindi definisce un triangolo";
+          break;
+        case 4:
+          std::cout << "La linea e' chiusa e quindi definisce un rettangolo";
+          break;
+        case 5:
+          std::cout << "La linea e' chiusa e quindi definisce un pentagono";
+          break;
+        case 6:
+          std::cout << "La linea e' chiusa e quindi definisce un esagono";
+          break;
+        case 7:
+          std::cout << "La linea e' chiusa e quindi definisce un ettagono";
+          break;
+        case 8:
+          std::cout << "La linea e' chiusa e quindi definisce un ottagono";
+          break;
+        case 9:
+          std::cout << "La linea e' chiusa e quindi definisce un ennagono";
+          break;
+        case 10:
+          std::cout << "La linea e' chiusa e quindi definisce un decagono";
+          break;
+        default:
+          std::cout << "La linea e' chiusa e quindi definisce un poligono";
+          break;
+      }
+
       if(lunghiUguali)
         std::cout << " regolare";
     }
