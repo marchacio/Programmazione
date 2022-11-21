@@ -1,17 +1,11 @@
 #include <iostream>
+#include "swap.h"
 
 /*
 Scrivere una funzione di nome swap che prende due argomenti a e b di tipo double,
 quando viene chiamata ne scambia i valori, e restituisce void.
 All’uscita, a e b devono avere i loro valori scambiati.
 */
-
-void swap(double& a, double& b){
-  double tmp = a;
-
-  a = b;
-  b = tmp;
-}
 
 int main() {
 

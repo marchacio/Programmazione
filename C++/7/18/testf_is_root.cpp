@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+#include "is_root.h"
 
 /*
 Scrivere una funzione con due argomenti reali x e sqrt_x che restituisce un valore booleano, true se sqrt_x è la radice
@@ -8,10 +8,6 @@ Per testare la funzione usate come dati 25.3268614564 la cui radice quadrata è 
   (se preferite altri valori, vi conviene partire da un numero con cifre decimali e farne il quadrato,
   in modo da evitare errori di approssimazione dovuti ai troncamenti).
 */
-
-bool funct(float x, float sqrt_x){
-  return std::fabs(sqrt_x*sqrt_x - x) < 0.0001;
-}
 
 int main() {
 
