@@ -1,6 +1,6 @@
 #include "selectvarfn.h"
 
-int selectvarfn(int lenght, char v[5]){
+int selectvarfn(int lenght, char v[]){
   char *punt = v;
 
   int n_cifre = 0;
