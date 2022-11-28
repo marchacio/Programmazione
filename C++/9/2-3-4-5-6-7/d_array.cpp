@@ -55,3 +55,14 @@ void create_d_array(dynamic_array& d, int s, int v) {
 
   d.store = punt;
 }
+
+
+//Assegna value al index del array dinamico d;
+void set(dynamic_array& d, int index, int value) {
+
+  //controlla che index sia un valore corretto, cioe non crei errori o.o.b.
+  const std::string err = "Valore di index non valido";
+  if(index < 0 || index > (int)d.size) throw err;
+
+  d.store[index] = value;
+}
