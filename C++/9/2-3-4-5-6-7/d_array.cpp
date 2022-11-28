@@ -38,3 +38,20 @@ void delete_d_array(dynamic_array& d) {
   d.size = 0;
   delete [] d.store;
 }
+
+//int s = size dell'array;
+//int v = valore
+//
+//inizializza d in modo che la sua size sia == s e tutti gli elementi siano v;
+void create_d_array(dynamic_array& d, int s, int v) {
+  //controlla che il array dinamico d sia vuoto; nel caso non lo fosse, cancellalo
+  if(d.size == 0) delete_d_array(d);
+
+  d.size = s;
+
+  int* punt = new int[s];
+  for(int i = 0; i < s; ++i)
+    punt[i] = v;
+
+  d.store = punt;
+}
