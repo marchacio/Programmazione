@@ -23,3 +23,6 @@ void set(dynamic_array& d, int index, int value);
 
 //Ritorna il valore di un elemento dell'array d in posizione index
 int get(const dynamic_array& d, int index);
+
+//Ordina l’array secondo l’algoritmo SelectionSort
+void SelectionSort(dynamic_array& d);

@@ -77,3 +77,21 @@ int get(const dynamic_array& d, int index) {
   int value = d.store[index];
   return value;
 }
+
+
+//Ordina l’array secondo l’algoritmo SelectionSort
+void SelectionSort(dynamic_array& d) {
+
+  for(int i = 0; i < (int)d.size-1; i++){
+
+  	int min=i;
+
+    for(int j = i+1; j < (int)d.size; j++)
+    	if (d.store[j] < d.store[min])
+         min = j;
+
+      int temp = d.store[min];
+      d.store[min] = d.store[i];
+      d.store[i] = temp;
+  }
+}
