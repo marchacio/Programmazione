@@ -20,3 +20,6 @@ void create_d_array(dynamic_array& d, int s, int v);
 
 //Assegna value al index del array dinamico d;
 void set(dynamic_array& d, int index, int value);
+
+//Ritorna il valore di un elemento dell'array d in posizione index
+int get(const dynamic_array& d, int index);

@@ -66,3 +66,14 @@ void set(dynamic_array& d, int index, int value) {
 
   d.store[index] = value;
 }
+
+
+//Ritorna il valore di un elemento dell'array d in posizione index
+int get(const dynamic_array& d, int index) {
+  //controlla che index sia valido
+  const std::string err = "Valore di index non valido";
+  if(index < 0 || index > (int)d.size) throw err;
+
+  int value = d.store[index];
+  return value;
+}
