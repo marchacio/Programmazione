@@ -1,4 +1,4 @@
-#include "d_array.h"
+#include "../d_array.h"
 
 int main() {
 

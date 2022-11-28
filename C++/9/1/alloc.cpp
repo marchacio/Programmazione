@@ -25,7 +25,7 @@ int main() {
   for(int i = 0; i< N; ++i)
     std::cout << v[i] << " ";
 
-  delete v;
+  delete [] v;
 
 
   v = new int[2*N];
@@ -37,7 +37,7 @@ int main() {
   for(int i = 0; i< 2*N; ++i)
     std::cout << v[i] << " ";
 
-  delete v;
+  delete [] v;
 
   return 0;
 }
