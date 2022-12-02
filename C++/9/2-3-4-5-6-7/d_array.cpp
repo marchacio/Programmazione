@@ -45,7 +45,10 @@ void delete_d_array(dynamic_array& d) {
 //inizializza d in modo che la sua size sia == s e tutti gli elementi siano v;
 void create_d_array(dynamic_array& d, int s, int v) {
   //controlla che il array dinamico d sia vuoto; nel caso non lo fosse, cancellalo
-  if(d.size == 0) delete_d_array(d);
+  if(d.size != 0) delete_d_array(d);
+
+  const std::string ERR = "La nuova dimensione dell'array dev'essere strettamente positiva";
+  if(s <= 0) throw ERR;
 
   d.size = s;
 
