@@ -7,7 +7,7 @@
 
 void print(const Hist &h)
 {
-  for (int i=0; i<h.size(); i++) std::cout << h[i].value << '\t' << h[i].num << '\n';
+  for (unsigned int i=0; i<h.size(); i++) std::cout << h[i].value << '\t' << h[i].num << '\n';
 }
 
 int main()
@@ -43,7 +43,7 @@ int main()
 
   std::cout << "5) istogramma in forma grafica:\n";
   int imax = 0;
-  for (int i=0; i<h.size(); i++) if (h[i].value>h[imax].value) imax=i;
+  for (unsigned int i=0; i<h.size(); i++) if (h[i].value>h[imax].value) imax=i;
   for (int i=0; i<=h[imax].value; i++) {
     std::cout << std::setw(3);
     std::cout << i << " ";

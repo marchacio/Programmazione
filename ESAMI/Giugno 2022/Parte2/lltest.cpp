@@ -10,7 +10,7 @@ void inverti(string str)
   ll t=nullptr;
   char c;
 
-  for(int i=0; i<str.size(); i++)  addhead(t,str[i]);
+  for(unsigned int i=0; i<str.size(); i++)  addhead(t,str[i]);
   std::cout<<"Size = "<<size(t)<<"\n";
   while (removehead(t, c)) std::cout << c;
 }
@@ -20,7 +20,7 @@ int main()
   string test1( "Hello, world!" );
   string test2( "SATOR AREPO TENET OPERA ROTAS" );
   string test3( "Call me Ismael." );
-   
+
   cout << "-----Test1: " << test1 << "\n";
   inverti(test1);
   cout << "\n\n";
