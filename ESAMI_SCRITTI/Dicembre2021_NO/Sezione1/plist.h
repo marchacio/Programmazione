@@ -6,7 +6,7 @@ struct Elem {
     struct Elem * next;
 };
 
-typedef Elem * PList; 
+typedef Elem * PList;
 
 // Funzioni che dovete implementare
 void PList_insert(PList &L, int val);

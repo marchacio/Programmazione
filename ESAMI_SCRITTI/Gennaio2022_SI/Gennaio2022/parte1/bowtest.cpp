@@ -6,7 +6,7 @@
 
 void print(const BagOfWords &b)
 {
-  for (int i=0; i<b.size(); i++) std::cout << b[i].num << '\t' << b[i].word << '\n';
+  for (unsigned int i=0; i<b.size(); i++) std::cout << b[i].num << '\t' << b[i].word << '\n';
 }
 
 int main()

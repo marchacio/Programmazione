@@ -12,23 +12,23 @@ void readAlbumLibrary(const std::string& filename, AlbumLibrary& AL) {
         string msg = "File non trovato: " + filename;
         throw(msg);
     }
-    
+
     string line;
     while(getline(albumfile, line)) {
-        
+
         if(!(line.compare("")==0)) {
             Album A;
             A.performer = line;
-        
+
             getline(albumfile, A.title);
-        
+
             getline(albumfile, line);
             A.year = stoi(line);
-        
+
             AL.push_back(A);
         }
     }
-    
+
     albumfile.close();
 
 }
@@ -50,18 +50,18 @@ void copyAlbum(const Album& source, Album& dest) {
 }
 
 bool isSorted(const AlbumLibrary& AL) {
-    
+
     if(AL.size() == 0) return true;
     unsigned int i = 0;
     while((i < AL.size()-1 ) && ((AL[i].year < AL[i+1].year) || (AL[i].year == AL[i+1].year && AL[i].title < AL[i+1].title)))
         ++i;
-    
+
     return(i==AL.size()-1);
 }
 
 void showMenu(string msg, const vector<string>& menu){
     cout<<endl<<msg<<endl;
-    for (int i = 1; i <= menu.size(); ++i) {
+    for (unsigned int i = 1; i <= menu.size(); ++i) {
         cout<<i<<'\t'<<menu.at(i-1)<<endl;
     }
 }
@@ -81,7 +81,7 @@ int getChoice(int maxChoice){
 
 // Makes the call under test and prints its result
 void printTestResult(bool res, AlbumLibrary& AL){
-    
+
     if(res) {
         sortAlbumLibrary(AL);
         printAlbumLibrary(AL);
@@ -93,50 +93,50 @@ void printTestResult(bool res, AlbumLibrary& AL){
         getline(cin, A.title, ';');
         getline(cin, A.performer, ';');
         cin >> A.year;
-            
+
         insertAlbum(A, AL);
         printAlbumLibrary(AL);
-        
+
     }
-    
+
 }
 
 int main() {
-    
+
     cout << endl << "Scegli il nome del file che contiene i dati da leggere: ";
-    string filename;
-    cin >> filename;
-    
+    string filename = "AL_TEST.txt";
+    //cin >> filename;
+
     try {
         // Per prima cosa, leggo il file per popolare il vector...
         AlbumLibrary AL;
         readAlbumLibrary(filename, AL);
         //... e ne stampo il contenuto
         printAlbumLibrary(AL);
-        
+
         char continuing='y';
         do {
-            
+
             vector<string> testFunChoices;
             testFunChoices.push_back("sortAlbumLibrary");
             testFunChoices.push_back("insertAlbum");
-            
+
             cout << endl;
             showMenu("Scegli la funzione su cui vuoi eseguire il test ",testFunChoices);
             int funChoice=getChoice(testFunChoices.size());
-            
+
             //cout<<endl<<"Il risultato di "<<((1==funChoice)?"sortAlbumLibrary e': ":"insertAlbum e': ")<<endl;
             printTestResult(1==funChoice, AL);
-            
+
             cout<<endl<<"Vuoi continuare con altri test? ('y'/'n' default 'n')"<<endl;
             cin>>continuing;
             continuing = tolower(continuing);
-            
+
         } while('n'!=continuing);
     } catch(string msg) {
         cout << msg << endl;
         return -1;
     }
     return 0;
-    
+
 }

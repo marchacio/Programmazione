@@ -15,7 +15,7 @@ void test(int n1, int n2)
   std::cout << "Test: "<<n1 << " + " <<n2 <<" ---> " << n1 + n2 << "\n";
   std::cout << "Conversione di "<< n1 << ": "; print (int2list(n1)); std::cout << "\n";
   std::cout << "Conversione di "<< n2 << ": "; print (int2list(n2)); std::cout << "\n";
-  std::cout << "Risultato "<< n2 << ": ";
+  std::cout << "Risultato: ";
   print (sum(int2list(n1),int2list(n2)));
   std::cout << "\n\n";
 }
